@@ -13,3 +13,14 @@ struct ControlPointsView: View {
                 createPoint(id: controlPoint.id)
                     .position(x: controlPoint.point.x * size.width,
                               y: controlPoint.point.y * size.height)
+            }
+        }
+        .allowsHitTesting(false)
+    }
+    
+    
+    private func createPoint(id: String) -> some View {
+        Circle()
+            .fill(selectedPointsIDs.contains(id) ? .red : .blue)
+            .frame(width: 25)
+            .overlay {
