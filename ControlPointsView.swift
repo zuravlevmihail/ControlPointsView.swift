@@ -36,3 +36,10 @@ struct ControlPointsView_Previews: PreviewProvider {
         ControlPointsView(
             selectedPointsIDs: ["2"],
             controlPoints: [
+                .init(point: .init(x: 0.1, y: 0.1), indexInElement: 0, type: .point, shapeID: "1"),
+                .init(point: .init(x: 0.2, y: 0.2), indexInElement: 1, type: .point, shapeID: "2")
+            ],
+            size: .init(side: 1000)
+        )
+    }
+}
